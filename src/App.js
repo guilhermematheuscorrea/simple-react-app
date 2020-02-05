@@ -1,9 +1,9 @@
 import React from 'react';
 import './App.css';
-import GoStackImage from './assets/GO1.png'
+import TechList from './components/TechList';
 
 function App() {
-  return <img src={GoStackImage}></img>
+  return <TechList />
 }
 
 export default App;
