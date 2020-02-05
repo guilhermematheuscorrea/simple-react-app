@@ -1,8 +1,9 @@
 import React from 'react';
 import './App.css';
+import GoStackImage from './assets/GO1.png'
 
 function App() {
-  return <h1>Hello World!</h1>
+  return <img src={GoStackImage}></img>
 }
 
 export default App;
