@@ -2,6 +2,11 @@ import React, { Component } from 'react';
 import TechItem from './TechItem'
 
 class TechList extends Component {
+
+  // static defaultProps = {
+  //
+  // }
+
   state = {
     newTech: '',
     techs: [
