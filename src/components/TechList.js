@@ -9,11 +9,28 @@ class TechList extends Component {
 
   state = {
     newTech: '',
-    techs: [
-      'Node.js',
-      'ReactJS',
-      'React Native'
-    ]
+    techs: []
+  }
+
+  // Executa assim que o componente aparece em tela
+  componentDidMount(){
+    const techs = localStorage.getItem('techs')
+
+    if(techs) {
+      this.setState({ techs: JSON.parse(techs) });
+    }
+  }
+
+  // Executa sempre que houver alterações nas props ou states
+  componentDidUpdate(prevProp, prevState) {
+    if(prevState.techs !== this.state.techs) {
+      localStorage.setItem('techs', JSON.stringify(this.state.techs));
+    }
+  }
+
+  // Executa quando o componente deixa de existis
+  componentWillUnmount(){
+
   }
 
   handleInputChange = e => {
